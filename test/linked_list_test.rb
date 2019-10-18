@@ -25,4 +25,9 @@ class LinkedListTest < Minitest::Test
     assert_nil @linked_list.head.next_node
   end
 
+  def test_count_method
+    @linked_list.append("West")
+    assert_equal 1, @linked_list.count
+  end
+
 end

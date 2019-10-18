@@ -15,7 +15,12 @@ class LinkedList
     end
   end
 
-
-
+  def count
+    if @head.nil?
+      return 0
+    else
+      @head.count(0)
+    end
+  end
 
 end

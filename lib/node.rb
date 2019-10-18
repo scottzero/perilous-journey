@@ -9,4 +9,13 @@ class Node
     @next_node = nil
   end
 
-end 
+  def count(val)
+    val += 1
+    if @next_node.nil?
+      return val
+    else
+      @next_node.count(val)
+    end
+  end 
+
+end
