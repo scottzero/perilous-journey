@@ -8,3 +8,5 @@ class Node
     @surname = name
     @next_node = nil
   end
+
+end 
