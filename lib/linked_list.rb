@@ -17,10 +17,28 @@ class LinkedList
 
   def count
     if @head.nil?
-      return 0
+       return 0
     else
       @head.count(0)
     end
   end
 
+  def to_string
+    string = "The #{@head.surname} family"
+    if @head.nil?
+      return string
+    else
+      @head.to_string(string)
+    end
+  end
+
+  def prepend(data)
+    if @head.nil?
+      @head = Node.new(data)
+    else
+      node = Node.new(data)
+      node.next_node = @head
+      @head = node
+    end
+  end
 end
